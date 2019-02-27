@@ -235,6 +235,7 @@ The ownCloud Administrator configures usernames and intial passwords, and an ema
 3.	When the ownCloud login screen appears, enter a user name and password. This information was provided in a welcome email from the adminstrator. 
 4.	Click the Login arrow, or press Enter on the keyboard. 
 5.	The ownCloud User Interface appears. 
+![ownCloudUI](/redhat/docs/ownCloudUI.jpg)
 
 ### Connecting via a Mobile Device
 
