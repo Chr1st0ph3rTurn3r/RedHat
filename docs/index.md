@@ -1,12 +1,12 @@
-#QuickStart# 
+# QuickStart # 
 
-#ownCloud Server Installation Using Docker#
+# ownCloud Server Installation Using Docker #
 
 Welcome to ownCloud! 
 
 This QuickStart is intended for administrators who are familiar with ownCloud and want to install ownCloud Server and configure user access quickly. 
 
-##System Requirements
+## System Requirements
 
 ownCloud server has the following System Requirements:
 
@@ -48,7 +48,7 @@ There are several options to install ownCloud Server.
 
 This guide focuses on installations using Docker. For information about other installation options, refer to the ownCloud Administrator Guide.
 
-###Installation with Docker on a Local Machine
+### Installation with Docker on a Local Machine
 
 The quickest way to install and configure ownCloud is using Docker from the official ownCloud Docker image. This image is designed to work with a data volume in the host filesystem as well as with separate MariaDB and Redis containers. The installation and configuration will:
 
@@ -165,7 +165,7 @@ the console. If there is a significant amount of activity, wait until it slows d
 7.	The ownCloud login screen appears.
 8.	Enter the Admin username and password defined in the .env configuration file earlier. 
 
-##Changing the ownCloud URL
+## Changing the ownCloud URL
 
 To change the ownCloud URL on Debian/Ubuntu Linux, edit these files:
 
@@ -187,7 +187,7 @@ Because ownCloud is aliased to the web root, other virtual hosts will not run. T
     /etc/httpd/conf.d/owncloud.conf
     /var/www/html/owncloud/config/config.php
 
-##Creating a New User
+## Creating a New User
 
 Create new users from the User Management page of the ownCloud Web UI. Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). After the user has been created, their Full Name can be added if it is different than the login name, or leave it for the user to complete.
 
@@ -226,7 +226,7 @@ The maximum disk space assigned to each user. Any user that exceeds the quota ca
 
 For additional information regarding user management, refer to the User Configuration section of the ownCloud Administrator documentation. 
 
-##Users Connecting to ownCloud
+## Users Connecting to ownCloud
 
 The ownCloud Administrator configures usernames and intial passwords, and an email is sent to each user containing the ownCloud URL. 
 
@@ -236,7 +236,7 @@ The ownCloud Administrator configures usernames and intial passwords, and an ema
 4.	Click the Login arrow, or press Enter on the keyboard. 
 5.	The ownCloud User Interface appears. 
 
-###Connecting via a Mobile Device
+### Connecting via a Mobile Device
 
 To connect to your ownCloud server with the ownCloud mobile apps, use the base URL and folder only:
 
