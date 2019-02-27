@@ -34,7 +34,7 @@ ownCloud server has the following System Requirements:
 
 *    5.6, 7.0, 7.1, and 7.2
 
-For a full list of supported platforms and additional information, please refer to the ownCloud System Requirements.
+For a full list of supported platforms and additional information, please refer to [the ownCloud System Requirements](https://doc.owncloud.com/server/admin_manual/installation/system_requirements.html).
 
 ## Installation
 
