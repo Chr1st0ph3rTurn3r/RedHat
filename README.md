@@ -120,7 +120,7 @@ The Docker installation configures the IP address/domain and port based on the i
     EOF
     Build and start the container
     docker-compose up -d
-</pre></code>
+</code></pre>
 
 
 5.	Run docker-compose ps to verify that all containers have started successfully, as indicated by the State column in the output below.  
