@@ -36,7 +36,7 @@ ownCloud server has the following System Requirements:
 
 For a full list of supported platforms and additional information, please refer to the ownCloud System Requirements.
 
-##Installation
+## Installation
 
 There are several options to install ownCloud Server.
  
