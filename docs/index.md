@@ -46,7 +46,7 @@ There are several options to install ownCloud Server.
 *    Using the Linux Package Manager (for single server installation, and not recommended for production environments).
 *    Using the Installation Wizard (not a secure installation method) 
 
-This guide focuses on installations using Docker. For information about other installation options, refer to the ownCloud Administrator Guide.
+This guide focuses on installations using Docker. For information about other installation options, refer to the [ownCloud Administrator Guide](https://doc.owncloud.com/server/admin_manual/).
 
 ### Installation with Docker on a Local Machine
 
@@ -100,7 +100,7 @@ To install:
 
 The admin username and password provide administrator access to the ownCloud UI, and allow the configuration of user accounts and groups. 
 
-The Docker installation configures the IP address/domain and port based on the information entered into the environment configuration file. The URL can be changed by editing the config file. See Changing the ownCloud URL for more information. 
+The Docker installation configures the IP address/domain and port based on the information entered into the environment configuration file. The URL can be changed by editing the config file. See [Changing the ownCloud URL](/Changing the ownCloud URL/) for more information. 
 
 4.	Start the container, using a Docker command-line tool. The sample .env file below was created using Docker Compose and the information above. 
 
@@ -246,4 +246,4 @@ To connect to your ownCloud server with the ownCloud mobile apps, use the base U
 2.	Click or tap Login. 
 3.	The ownCloud User Interface appears.
 
-For detailed information about using ownCloud, refer to the ownCloud User Manual. 
+For detailed information about using ownCloud, refer to the [ownCloud User Manual](https://doc.owncloud.com/server/user_manual/). 
