@@ -2,14 +2,15 @@
 
 #ownCloud Server Installation Using Docker
 
-Welcome to ownCloud! This QuickStart is intended for administrators who are familiar with ownCloud and want to install ownCloud 
+Welcome to ownCloud! 
 
-Server and configure user access quickly. 
+This QuickStart is intended for administrators who are familiar with ownCloud and want to install ownCloud Server and configure user access quickly. 
+
 ##System Requirements
 
 ownCloud server has the following System Requirements:
 
-Operating System
+**Operating System**
 
 *    Ubuntu 16.04 and 18.04
 *    Debian 7, 8 and 9;
@@ -18,18 +19,18 @@ Operating System
 *    Fedora 27, 28 and 29
 *    openSUSE Leap 42.3 and 15
 
-Database
+**Database**
 	
 *    MySQL or MariaDB 5.5+
 *    Oracle 11g
 *    PostgreSQL 9 (versions 10 and above are not yet supported)
 *    SQLite
 
-Web server
+**Web server**
 
 *    Apache 2.4 with prefork and mod_php
 
-PHP Runtime
+**PHP Runtime**
 
 *    5.6, 7.0, 7.1, and 7.2
 
@@ -45,17 +46,11 @@ There are several options to install ownCloud Server.
 *    Using the Linux Package Manager (for single server installation, and not recommended for production environments).
 *    Using the Installation Wizard (not a secure installation method) 
 
-This guide focuses on installations using Docker. For information about other installation options, refer to the ownCloud Administrator 
-
-Guide.
+This guide focuses on installations using Docker. For information about other installation options, refer to the ownCloud Administrator Guide.
 
 ###Installation with Docker on a Local Machine
 
-The quickest way to install and configure ownCloud is using Docker from the official ownCloud Docker image. This image is designed 
-
-to work with a data volume in the host filesystem as well as with separate MariaDB and Redis containers. The installation and 
-
-configuration will:
+The quickest way to install and configure ownCloud is using Docker from the official ownCloud Docker image. This image is designed to work with a data volume in the host filesystem as well as with separate MariaDB and Redis containers. The installation and configuration will:
 
 *    expose port 8080, allowing for HTTP connections.
 *    mount the data and MySQL data directories on the host for persistent storage.
@@ -103,17 +98,11 @@ To install:
     </tr>
 </table>
 
-The admin username and password provide administrator access to the ownCloud UI, and allow the configuration of user accounts and 
+The admin username and password provide administrator access to the ownCloud UI, and allow the configuration of user accounts and groups. 
 
-groups. 
+The Docker installation configures the IP address/domain and port based on the information entered into the environment configuration file. The URL can be changed by editing the config file. See Changing the ownCloud URL for more information. 
 
-The Docker installation configures the IP address/domain and port based on the information entered into the environment configuration 
-
-file. The URL can be changed by editing the config file. See Changing the ownCloud URL for more information. 
-
-4.	Start the container, using a Docker command-line tool. The sample .env file below was created using Docker Compose and 
-
-the information above. 
+4.	Start the container, using a Docker command-line tool. The sample .env file below was created using Docker Compose and the information above. 
 
 <pre><code>
     Create a new project directory
@@ -134,9 +123,7 @@ the information above.
 </code></pre>
 
 
-5.	Run docker-compose ps to verify that all containers have started successfully, as indicated by the State column in the output 
-
-below.  
+5.	Run docker-compose ps to verify that all containers have started successfully, as indicated by the State column in the output below.  
 
 <table style="border-collapse: separate;" width="70%" cellspacing="0" 
 		 border="1">
@@ -172,7 +159,6 @@ below.
 When the database, ownCloud, and Redis containers are running, ownCloud is accessible via port 8080 on the host machine.
 
 Note that it takes a few minutes for ownCloud to be fully functional. Run docker-compose logs --follow owncloud to view the logging to 
-
 the console. If there is a significant amount of activity, wait until it slows down to attempt to access the web UI.
 
 6.	Log in to the ownCloud UI using http://localhost:8080 in a browser.
@@ -196,31 +182,21 @@ To change the ownCloud URL on Debian/Ubuntu Linux, edit these files:
 
 3.	Save the file and restart Apache. ownCloud can accessed via the URL specified. 
 
-Because ownCloud is aliased to the web root, other virtual hosts will not run. To change this on CentOS/Fedora/Red Hat edit the 
-
-following files and restart Apache.
+Because ownCloud is aliased to the web root, other virtual hosts will not run. To change this on CentOS/Fedora/Red Hat edit the following files and restart Apache.
 
     /etc/httpd/conf.d/owncloud.conf
     /var/www/html/owncloud/config/config.php
 
 ##Creating a New User
 
-Create new users from the User Management page of the ownCloud Web UI. Login names may contain letters (a-z, A-Z), numbers (0-
-
-9), dashes (-), underscores (_), periods (.) and at signs (@). After the user has been created, their Full Name can be added if it is 
-
-different than the login name, or leave it for the user to complete.
+Create new users from the User Management page of the ownCloud Web UI. Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@). After the user has been created, their Full Name can be added if it is different than the login name, or leave it for the user to complete.
 
 1.	In the default view, enter a new user Login Name. 
 2.	Enter an initial Password (cannot be "0").
 3.	Optionally, assign Groups memberships.
 4.	Click the Create button.
 
-To send an email to a new user, select *Send email to new user* in the control panel on the lower left sidebar. Enter the new user’s 
-
-email address, and ownCloud will automatically send them a notification with their new login information. The email content can be 
-
-edited using the email template editor on the Admin page (see Email Configuration).
+To send an email to a new user, select *Send email to new user* in the control panel on the lower left sidebar. Enter the new user’s email address, and ownCloud will automatically send them a notification with their new login information. The email content can be edited using the email template editor on the Admin page (see Email Configuration).
 
 User accounts have the following properties:
 
@@ -230,9 +206,7 @@ The unique ID of an ownCloud user. This cannot be changed.
 
 **Full Name**
 
-The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users may change the Full 
-
-Name anytime. If the Full Name is not set, it defaults to the login name.
+The user’s display name that appears on file shares, the ownCloud Web interface, and emails. Admins and users may change the Full Name anytime. If the Full Name is not set, it defaults to the login name.
 
 **Password**
 
@@ -248,25 +222,17 @@ Group admins are granted administrative privileges on specific groups, and can a
 
 **Quota**
 
-The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. There is an option to 
+The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. There is an option to include external storage in user quotas.
 
-include external storage in user quotas.
-
-For additional information regarding user management, refer to the User Configuration section of the ownCloud Administrator 
-
-documentation. 
+For additional information regarding user management, refer to the User Configuration section of the ownCloud Administrator documentation. 
 
 ##Users Connecting to ownCloud
 
-The ownCloud Administrator configures usernames and intial passwords, and an email is sent to each user containing the ownCloud 
-
-URL. 
+The ownCloud Administrator configures usernames and intial passwords, and an email is sent to each user containing the ownCloud URL. 
 
 1.	Open a browser.
 2.	Enter http: //localhost.owncloud.com in the address bar.
-3.	When the ownCloud login screen appears, enter a user name and password. This information was provided in a welcome 
-
-email from the adminstrator. 
+3.	When the ownCloud login screen appears, enter a user name and password. This information was provided in a welcome email from the adminstrator. 
 4.	Click the Login arrow, or press Enter on the keyboard. 
 5.	The ownCloud User Interface appears. 
 
@@ -276,9 +242,7 @@ To connect to your ownCloud server with the ownCloud mobile apps, use the base U
 
     example.com/owncloud
 
-1.	When the ownCloud login screen appears, enter a user name and password. This information was provided in a welcome 
-
-email from the adminstrator. 
+1.	When the ownCloud login screen appears, enter a user name and password. This information was provided in a welcome email from the adminstrator. 
 2.	Click or tap Login. 
 3.	The ownCloud User Interface appears.
 
